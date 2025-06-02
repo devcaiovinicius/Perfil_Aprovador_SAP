@@ -1,36 +1,61 @@
-## 🔐 Script em Python para Reset de Senha Individual/em Massa - SAP
+👤 Script em Python para Criação de Perfil Aprovador - SAP  
 
-## 📌 Objetivo
+📌 Objetivo  
+Automatizar o processo de criação de perfis de aprovadores no SAP via SAP GUI, utilizando Python para automatizar todo o processo, processo executado via transações PA30 e SE38.
 
-Visando reduzir o esforço manual dos chamados n1 de solicitações de reset de senha de usuários SAP, script será valido até o momento que realizarmos a implementação da melhoria de login via SSO no SAP GUI.
+⚙️ Funcionalidades  
+- Leitura de dados a partir de planilha Excel (.xlsm)  
+- Execução da transação PA30 para cadastro de dados pessoais, organizacionais e endereço  
+- Geração de perfil através do programa `/SHCM/RH_SYNC_BUPA_EMPL_SINGLE` na SE38  
+- Geração em lote para múltiplos usuários  
 
-## ⚙️ Funcionalidades
+🧠 Pré-requisitos  
+- Windows com SAP GUI instalado e acesso ao sistema SAP  
+- SAP GUI Scripting habilitado (Solicitar habilitação ao time Basis da sua empresa)  
+- Python (qualquer versão compatível com a biblioteca pywin32)  
+- Biblioteca `pywin32` instalada
+- Planilha Excel com os campos: Nome, Sobrenome, Usuário, ID (matrícula), Sexo  
 
-PREENCHER
+💡 Observações  
+- O script utiliza caminhos e valores fixos (ex: `BR01`, `50000000`, datas, etc). Adapte conforme a realidade do seu ambiente.  
+- Certifique-se de executar o script com o SAP GUI aberto e logado.  
 
-## 🧠 Pré-requisitos
+📂 Estrutura esperada da planilha Excel (aba `PERFIL APROVADOR`):
 
-- Windows com SAP GUI instalado e acesso ao sistema SAP
-- SAP GUI Scripting habilitado (Acionar o Basis da sua empresa para habilitar a função)
-- Python (todas versões com compatibilidade da biblioteca pywin32)
-- Biblioteca pywin32 instalada (Necessária por intrepertar a validação da conexão com o SAP)
+| Nome | Sobrenome | Usuário | ID | Sexo |
+|------|-----------|---------|----|------|
+| João | Silva     | joaoslv | 12345678 | M |
+| Maria| Souza     | mrsouza | 87654321 | F |
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+👤 Python Script for Approver Profile Creation - SAP  
 
-## 🔐 Python Script for Individual/Mass Password Reset - SAP
+📌 Objective  
+Automate the creation of approver profiles in SAP via SAP GUI, using Python to automate the process, process executed via transactions PA30 and SE38.
 
-## 📌 Objective
 
-Aiming to reduce the manual effort of Level 1 support calls related to SAP user password reset requests, this script will be valid until the implementation of the SSO login improvement in SAP GUI.
+⚙️ Features  
+- Excel (.xlsm) spreadsheet data reading  
+- Executes PA30 transaction to register personal, organizational, and address data  
+- Runs `/SHCM/RH_SYNC_BUPA_EMPL_SINGLE` program in SE38 to generate the profile  
+- Batch creation for multiple users  
 
-## ⚙️ Features
+🧠 Prerequisites  
+- Windows with SAP GUI installed and access to the SAP system  
+- SAP GUI Scripting enabled (Request the Basis team of your company to enable this feature)  
+- Python (any version compatible with the `pywin32` library)  
+- `pywin32` library installed (`pip install pywin32`)  
+- Excel file containing the fields: First Name, Last Name, Username, ID (Employee Number), Gender  
 
-TO BE FILLED
+💡 Notes  
+- The script uses hardcoded values (e.g., `BR01`, `50000000`, specific dates, etc.). Adjust according to your company’s setup.  
+- Ensure SAP GUI is open and logged in before executing the script.
+- 
 
-## 🧠 Prerequisites
-- Windows with SAP GUI installed and access to the SAP system
-- SAP GUI Scripting enabled (Request your company’s Basis team to enable this feature)
-- Python (any version compatible with the pywin32 library)
-- pywin32 library installed (Required to handle SAP connection validation)
+📂 Expected Excel Spreadsheet Structure (`PERFIL APROVADOR` sheet):
 
+| First Name | Last Name | Username | ID       | Gender |
+|------------|-----------|----------|----------|--------|
+| João       | Silva     | joaoslv  | 12345678 | M      |
+| Maria      | Souza     | mrsouza  | 87654321 | F      |
 
