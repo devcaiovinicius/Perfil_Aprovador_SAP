@@ -50,7 +50,7 @@ Automate the creation of approver profiles in SAP via SAP GUI, using Python to a
 💡 Notes  
 - The script uses hardcoded values (e.g., `BR01`, `50000000`, specific dates, etc.). Adjust according to your company’s setup.  
 - Ensure SAP GUI is open and logged in before executing the script.
-- 
+
 
 📂 Expected Excel Spreadsheet Structure (`PERFIL APROVADOR` sheet):
 
